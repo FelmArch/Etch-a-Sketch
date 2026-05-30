@@ -2,6 +2,7 @@
 
 const board = document.querySelector("#container");
 const botaoTamanho = document.querySelector("#btnGrid");
+const botaoReset = document.querySelector("#btnReset");
 
 
 function criarTabuleiro(tamanho) {
@@ -37,4 +38,12 @@ botaoTamanho.addEventListener("click", () => {
         board.innerHTML = "";
         criarTabuleiro(tamanhoNovo);
     }
+});
+
+botaoReset.addEventListener("click", () => {
+    const todosOsPixel = document.querySelectorAll(".pixel");
+
+    todosOsPixel.forEach(pixel => {
+        pixel.style.opacity = "0"
+    });
 });

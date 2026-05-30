@@ -13,10 +13,10 @@ for (let i = 0; i < 256 ; i++) {
     board.appendChild(novoQuadro);
 
     novoQuadro.addEventListener("mouseover", () => {
-        const r = Math.floor(Math.random() * 256);
-        const g = Math.floor(Math.random() * 256);
-        const b = Math.floor(Math.random() * 256);
-        novoQuadro.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        let opacidadeAtual = parseFloat(novoQuadro.style.opacity);
+        if (opacidadeAtual < 1) {
+            novoQuadro.style.opacity = (opacidadeAtual + 0.1).toString();
+        }
     });
 };
 
@@ -35,13 +35,14 @@ botaoTamanho.addEventListener("click", () => {
             const tamanhoQuadrado = 800 / tamanhoNovo;
             novoQuadro.style.width = `${tamanhoQuadrado}px`;
             novoQuadro.style.height = `${tamanhoQuadrado}px`;
+            novoQuadro.style.opacity = "0";
             board.appendChild(novoQuadro);
 
             novoQuadro.addEventListener("mouseover", () => {
-                const r = Math.floor(Math.random() * 256);
-                const g = Math.floor(Math.random() * 256);
-                const b = Math.floor(Math.random() * 256);
-                novoQuadro.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                let opacidadeAtual = parseFloat(novoQuadro.style.opacity);
+                if (opacidadeAtual < 1) {
+                    novoQuadro.style.opacity = (opacidadeAtual + 0.1).toString();
+                }
             });
         }
     }

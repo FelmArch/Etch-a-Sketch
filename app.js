@@ -9,6 +9,7 @@ for (let i = 0; i < 256 ; i++) {
     const tamanhoInicial = 800 / 16;
     novoQuadro.style.width = `${tamanhoInicial}px`;
     novoQuadro.style.height = `${tamanhoInicial}px`;
+    novoQuadro.style.opacity = "0";
     board.appendChild(novoQuadro);
 
     novoQuadro.addEventListener("mouseover", () => {

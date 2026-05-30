@@ -12,7 +12,10 @@ for (let i = 0; i < 256 ; i++) {
     board.appendChild(novoQuadro);
 
     novoQuadro.addEventListener("mouseover", () => {
-        novoQuadro.style.backgroundColor = "#3498db";
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        novoQuadro.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
     });
 };
 
@@ -34,7 +37,10 @@ botaoTamanho.addEventListener("click", () => {
             board.appendChild(novoQuadro);
 
             novoQuadro.addEventListener("mouseover", () => {
-                novoQuadro.style.backgroundColor = "#3498db";
+                const r = Math.floor(Math.random() * 256);
+                const g = Math.floor(Math.random() * 256);
+                const b = Math.floor(Math.random() * 256);
+                novoQuadro.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             });
         }
     }

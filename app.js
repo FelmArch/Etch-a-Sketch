@@ -6,6 +6,9 @@ const botaoTamanho = document.querySelector("#btnGrid");
 for (let i = 0; i < 256 ; i++) {
     const novoQuadro = document.createElement("div");
     novoQuadro.classList.add("pixel");
+    const tamanhoInicial = 800 / 16;
+    novoQuadro.style.width = `${tamanhoInicial}px`;
+    novoQuadro.style.height = `${tamanhoInicial}px`;
     board.appendChild(novoQuadro);
 
     novoQuadro.addEventListener("mouseover", () => {
@@ -25,6 +28,9 @@ botaoTamanho.addEventListener("click", () => {
         for (let i = 0; i < tamanhoNovo * tamanhoNovo; i++) {
             const novoQuadro = document.createElement("div");
             novoQuadro.classList.add("pixel");
+            const tamanhoQuadrado = 800 / tamanhoNovo;
+            novoQuadro.style.width = `${tamanhoQuadrado}px`;
+            novoQuadro.style.height = `${tamanhoQuadrado}px`;
             board.appendChild(novoQuadro);
 
             novoQuadro.addEventListener("mouseover", () => {
